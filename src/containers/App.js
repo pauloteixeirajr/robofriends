@@ -4,6 +4,7 @@ import './App.css';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
+import Header from '../components/Header';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 import { setSearchField, requestRobots } from '../actions';
@@ -36,7 +37,7 @@ class App extends React.Component {
     });
     return (
       <div className="tc">
-        <h1 className="f1">RoboFriends</h1>
+        <Header />
         <SearchBox onSearchChange={onSearchChange} />
         <Scroll>
           <ErrorBoundary>
